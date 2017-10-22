@@ -23,10 +23,10 @@ class CommandListener extends ListenerAdapter {
         // ignore bots
         if (e.getAuthor().isBot()) return;
 
-        String[] parts = e.getMessage().getContent().substring(parent.PREFIX.length()).split(" ");
-
         // ignore messages that don't start with the prefix
-        if (!parts[0].startsWith(parent.PREFIX)) return;
+        if (!e.getMessage().getContent().startsWith(parent.PREFIX)) return;
+
+        String[] parts = e.getMessage().getContent().substring(parent.PREFIX.length()).split(" ");
 
         String command = parts[0].toLowerCase();
 
