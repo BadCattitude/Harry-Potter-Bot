@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Place this in the following directory and name it "logback.xml"
+  ~ For testing, you'll want to have a copy of this and name it "logback-test.xml"
+  ~ src
+  ~ - main
+  ~   - resources
+  ~     - logback.xml
+  ~ - test
+  ~   - resources
+  ~     - logback-test.xml
+  -->
+
+<!-- author: Kaidan Gustave -->
+<configuration>
+
+    <appender name="Simple" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- Pattern -->
+            <pattern>
+                [%d{HH:mm:ss}] [%level] [%logger{0}]: %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="Simple"/>
+    </root>
+
+</configuration>
