@@ -2,20 +2,20 @@ package me.badcattitude.harrypotterbot.commands;
 
 import net.dv8tion.jda.core.entities.Message;
 
-/**
- * Basic ping command
- */
-public class PingCommand extends Command {
+
+public class Help extends Command {
 
     @Override
     public void execute(Message message, String[] args) {
         // reply with "Pong!"
-        message.getChannel().sendMessage("Pong!").queue();
+        
+        String website = "";
+        message.getChannel().sendMessage("Here is a list of commands: " + website).queue();
     }
 
     @Override
     public String getName() {
-        return "ping";
+        return "help";
     }
 
     // no extra aliases, so no need to override getAliases
