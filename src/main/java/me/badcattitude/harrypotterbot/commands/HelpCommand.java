@@ -3,11 +3,10 @@ package me.badcattitude.harrypotterbot.commands;
 import net.dv8tion.jda.core.entities.Message;
 
 
-public class Help extends Command {
+public class HelpCommand extends Command {
 
     @Override
     public void execute(Message message, String[] args) {
-        // reply with "Pong!"
         
         String website = "";
         message.getChannel().sendMessage("Here is a list of commands: " + website).queue();
