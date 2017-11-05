@@ -26,9 +26,9 @@ class HPBot {
     // default prefix
     final String PREFIX = "hp!";
 
-    HPBot() throws LoginException, InterruptedException, RateLimitedException {
+    HPBot(String token) throws LoginException, InterruptedException, RateLimitedException {
         jda = new JDABuilder(AccountType.BOT)
-                .setToken("MzY4NTQ5NDE1MzM5OTUwMDgw.DM60MA.d76kBXu30Ge_gGFhurVdT1oZ8Bs")
+                .setToken(token)
                 .addEventListener(new CommandListener(this))
                 .buildBlocking();
 
